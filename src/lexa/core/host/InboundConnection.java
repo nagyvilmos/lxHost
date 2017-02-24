@@ -9,7 +9,7 @@ import java.util.*;
 import lexa.core.comms.Session;
 import lexa.core.comms.SessionListener;
 import lexa.core.data.DataSet;
-import lexa.core.data.SimpleDataSet;
+import lexa.core.data.ArrayDataSet;
 import lexa.core.data.exception.DataException;
 import lexa.core.logging.Logger;
 import lexa.core.server.connection.Connection;
@@ -48,7 +48,7 @@ class InboundConnection
         Message message = new Message(this,data);
         int id = this.connection.submit(message);
         this.messages.add(message);
-        DataSet confirm = new SimpleDataSet()
+        DataSet confirm = new ArrayDataSet()
 				.put(Context.SYSTEM_REQUEST, "messageReceived")
 				.put(data.get(Context.SOURCE_REF))
 				.put(Context.SOURCE_ID, id);

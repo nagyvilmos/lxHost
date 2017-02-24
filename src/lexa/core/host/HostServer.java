@@ -11,7 +11,7 @@ import java.util.Set;
 import lexa.core.comms.*;
 import lexa.core.data.config.ConfigDataSet;
 import lexa.core.data.DataSet;
-import lexa.core.data.SimpleDataSet;
+import lexa.core.data.ArrayDataSet;
 import lexa.core.data.exception.DataException;
 import lexa.core.expression.ExpressionException;
 import lexa.core.expression.function.FunctionLibrary;
@@ -51,7 +51,7 @@ public class HostServer
         DataSet fd = null;
         if(config.contains("functions")) {
             ConfigDataSet fc = config.getDataSet("functions");
-            fd = new SimpleDataSet(fc);
+            fd = new ArrayDataSet(fc);
             fc.close();
         }
         FunctionLibrary functionLibrary = new FunctionLibrary(fd);
