@@ -1,20 +1,15 @@
 #===============================================================================
 # Lexa - Property of William Norman-Walker
 #-------------------------------------------------------------------------------
-# server.config
+# test.host.lexa
 #-------------------------------------------------------------------------------
 # simple config for a simple test server.
 # this mirrors the internal echo server from lxServer.jar test.
 #-------------------------------------------------------------------------------
 # Author:  William Norman-Walker
 # Created: August 2013
-#-------------------------------------------------------------------------------
-# Change Log
-# Date:        By: Ref:        Description:
-# ----------   --- ----------  -------------------------------------------------
-# -            -   -           -
 #===============================================================================
-#logFile log/test.server.log
+#logFile log/test.host.log
 name test.host
 server {
     port % 31066
