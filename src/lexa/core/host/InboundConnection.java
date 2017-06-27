@@ -1,6 +1,11 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
+/*==============================================================================
+ * Lexa - Property of William Norman-Walker
+ *------------------------------------------------------------------------------
+ * InboundConnection.java
+ *------------------------------------------------------------------------------
+ * Author:  William Norman-Walker
+ * Created: August 2013
+ *==============================================================================
  */
 package lexa.core.host;
 
@@ -18,8 +23,9 @@ import lexa.core.server.messaging.Message;
 import lexa.core.server.messaging.MessageSource;
 
 /**
- *
- * @author Felhasználó
+ * An inbound connection to the host.
+ * @author william
+ * @since 2013-08
  */
 class InboundConnection
         implements SessionListener,
@@ -35,7 +41,12 @@ class InboundConnection
         this.connection = connection;
         this.messages = new ArrayList();
     }
-    
+
+    void close()
+    {
+        throw new UnsupportedOperationException("InboundConnection.close not supported yet.");
+    }
+
     void open() {
 		this.logger.debug("open");
         this.session.setSessionListener(this);
